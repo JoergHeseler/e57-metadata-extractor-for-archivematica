@@ -19,7 +19,7 @@ To install this script, follow these steps:
 - In the Archivematica frontend, navigate to **Preservation planning** > **Format policy registry** > **Tools** > **Create new tool** or go directly to [this link](http://10.10.10.20/fpr/fptool/create/).
 - Enter the following parameters:
   - **Description**: Enter `e57xmldump`.
-  - **Version**: Enter the version you downloaded, e. g. `2.0.0-dev.3.8`.
+  - **Version**: Enter the version you downloaded, e. g. `1.1.312`.
 - Click **Save**.
 
 ### 4. Create a new characterization command
@@ -46,7 +46,7 @@ To install this script, follow these steps:
 
 ## Test
 
-To test this metadata exctractor, you can use the sample E57 files located [here](https://github.com/JoergHeseler/mesh-samples-for-preservation-testing/tree/main/e57).
+To test this metadata exctractor, you can use the sample E57 files located [here](https://github.com/JoergHeseler/point-cloud-samples-for-preservation-testing/tree/main/e57).
 
 ### In Archivematica:
 
@@ -60,7 +60,7 @@ You can use the validator at the command line prompt by typing `python e57-metad
 
 ### Example
 
-If you use this script to characterize the ASCII embedded E57 2.0 model [`cockatoo-e57-2.0_separated-valid.e57`](https://github.com/JoergHeseler/3d-sample-files-for-digital-preservation-testing/blob/main/e57/cockatoo-e57-2.0_separated-valid/cockatoo-e57-2.0_separated-valid.e57), the error code **0** should be returned and the following XML content will be included in the AIP's METS document in the <objectCharacteristicsExtension> element of the file:
+If you use this script to characterize the E57 model [`cockatoo-e57-1.0-color_transferred-valid.e57`](https://github.com/JoergHeseler/point-cloud-samples-for-preservation-testing/blob/main/e57/cockatoo-e57-1.0-color_transferred-valid), the error code **0** should be returned and the following XML content will be included in the AIP's METS document in the <objectCharacteristicsExtension> element of the file:
 
 ```xml
 <?xml version="1.0" ?>
