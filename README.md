@@ -63,104 +63,71 @@ You can use the validator at the command line prompt by typing `python e57-metad
 If you use this script to characterize the E57 model [`cockatoo-e57-1.0-color_transferred-valid.e57`](https://github.com/JoergHeseler/point-cloud-samples-for-preservation-testing/blob/main/e57/cockatoo-e57-1.0-color_transferred-valid), the error code **0** should be returned and the following XML content will be included in the AIP's METS document in the <objectCharacteristicsExtension> element of the file:
 
 ```xml
-<?xml version="1.0" ?>
-<GLTFMetadataExtractor xmlns="http://nfdi4culture.de/gltf-metadata-extractor1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://nfdi4culture.de/gltf-metadata-extractor1 https://raw.githubusercontent.com/JoergHeseler/gltf-metadata-extractor-for-archivematica/refs/heads/main/src/gltf-metadata-extractor.xsd">
-    <formatName>glTF (Graphics Library Transmission Format)</formatName>
-    <formatVersion>2.0</formatVersion>
-    <size>11090</size>
-    <SHA256Checksum>a687aa792ee2fa6fd4c8a4c4ce116edc0d09a79e520de8caae662d44140ae5f8</SHA256Checksum>
-    <creationDate>2024-12-13T10:03:42.166498</creationDate>
-    <modificationDate>2024-12-13T13:28:35.842678</modificationDate>
-    <generator>Khronos glTF Blender I/O v4.3.47</generator>
-    <hasDefaultScene>true</hasDefaultScene>
-    <totalVertexCount>519913</totalVertexCount>
-    <totalTriangleCount>776822</totalTriangleCount>
-    <materialCount>1</materialCount>
-    <hasTextures>true</hasTextures>
-    <animationCount>0</animationCount>
-    <hasSkins>false</hasSkins>
-    <rawGLTFValidatorOutput><![CDATA[{
-    "uri": "var/archivematica/sharedDirectory/watchedDirectories/workFlowDecisions/extractPackagesChoice/g16_test-dd341170-fea6-4371-9198-5a5dc79b2fe7/objects/cockatoo-gltf-2.0_separated-valid.gltf",
-    "mimeType": "model/gltf+json",
-    "validatorVersion": "2.0.0-dev.3.8",
-    "issues": {
-        "numErrors": 0,
-        "numWarnings": 0,
-        "numInfos": 0,
-        "numHints": 0,
-        "messages": [],
-        "truncated": false
-    },
-    "info": {
-        "version": "2.0",
-        "generator": "Khronos glTF Blender I/O v4.3.47",
-        "extensionsUsed": [
-            "KHR_materials_specular"
-        ],
-        "resources": [
-            {
-                "pointer": "/buffers/0",
-                "mimeType": "application/gltf-buffer",
-                "storage": "external",
-                "uri": "cockatoo-gltf-2.0_separated-valid.bin",
-                "byteLength": 25589552
-            },
-            {
-                "pointer": "/images/0",
-                "mimeType": "image/png",
-                "storage": "external",
-                "uri": "Image_2.png",
-                "image": {
-                    "width": 1024,
-                    "height": 1024,
-                    "format": "rgb",
-                    "primaries": "srgb",
-                    "transfer": "srgb",
-                    "bits": 8
-                }
-            },
-            {
-                "pointer": "/images/1",
-                "mimeType": "image/jpeg",
-                "storage": "external",
-                "uri": "Image_0.jpg",
-                "image": {
-                    "width": 1024,
-                    "height": 1024,
-                    "format": "rgb",
-                    "bits": 8
-                }
-            },
-            {
-                "pointer": "/images/2",
-                "mimeType": "image/png",
-                "storage": "external",
-                "uri": "Image_1.png",
-                "image": {
-                    "width": 1024,
-                    "height": 1024,
-                    "format": "rgb",
-                    "primaries": "srgb",
-                    "transfer": "srgb",
-                    "bits": 8
-                }
-            }
-        ],
-        "animationCount": 0,
-        "materialCount": 1,
-        "hasMorphTargets": false,
-        "hasSkins": false,
-        "hasTextures": true,
-        "hasDefaultScene": true,
-        "drawCallCount": 8,
-        "totalVertexCount": 519913,
-        "totalTriangleCount": 776822,
-        "maxUVs": 1,
-        "maxInfluences": 0,
-        "maxAttributes": 3
-    }
-}]]></rawGLTFValidatorOutput>
-</GLTFMetadataExtractor>
+<E57MetadataExtractor xmlns="http://nfdi4culture.de/e57-metadata-extractor1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://nfdi4culture.de/e57-metadata-extractor1 https://raw.githubusercontent.com/JoergHeseler/e57-metadata-extractor-for-archivematica/refs/heads/main/src/e57-metadata-extractor.xsd">
+    <formatName>ASTM E57 3D Imaging Data File</formatName>
+    <formatVersion>1.0</formatVersion>
+    <size>14074880</size>
+    <SHA256Checksum>45c2b120c7e4e9ec41aaa592b4e7963b62ac396e51b9083cfce3e36413145e58</SHA256Checksum>
+    <creationDate>2025-01-14T14:52:22.172615</creationDate>
+    <modificationDate>2025-01-14T14:52:31.466197</modificationDate>
+    <generator>E57Format-2.2.0-AMD64_64-windows</generator>
+    <totalScanCount>1</totalScanCount>
+    <totalPointCount>518889</totalPointCount>
+    <totalImageCount>0</totalImageCount>
+    <rawE57XmlDumpOutput>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;e57Root type=&quot;Structure&quot;
+         xmlns=&quot;http://www.astm.org/COMMIT/E57/2010-e57-v1.0&quot;
+         xmlns:nor=&quot;http://www.libe57.org/E57_NOR_surface_normals.txt&quot;&gt;
+  &lt;formatName type=&quot;String&quot;&gt;&lt;![CDATA[ASTM E57 3D Imaging Data File]]&gt;&lt;/formatName&gt;
+  &lt;guid type=&quot;String&quot;&gt;&lt;![CDATA[{233FB646-7CBC-4B4B-750F-2B54793346A5}]]&gt;&lt;/guid&gt;
+  &lt;versionMajor type=&quot;Integer&quot;&gt;1&lt;/versionMajor&gt;
+  &lt;versionMinor type=&quot;Integer&quot;/&gt;
+  &lt;e57LibraryVersion type=&quot;String&quot;&gt;&lt;![CDATA[E57Format-2.2.0-AMD64_64-windows]]&gt;&lt;/e57LibraryVersion&gt;
+  &lt;data3D type=&quot;Vector&quot; allowHeterogeneousChildren=&quot;1&quot;&gt;
+    &lt;vectorChild type=&quot;Structure&quot;&gt;
+      &lt;guid type=&quot;String&quot;&gt;&lt;![CDATA[{aa9ade13-58b5-403b-a810-a3883ae3effb}]]&gt;&lt;/guid&gt;
+      &lt;colorLimits type=&quot;Structure&quot;&gt;
+        &lt;colorRedMaximum type=&quot;Integer&quot;&gt;255&lt;/colorRedMaximum&gt;
+        &lt;colorRedMinimum type=&quot;Integer&quot;/&gt;
+        &lt;colorGreenMaximum type=&quot;Integer&quot;&gt;255&lt;/colorGreenMaximum&gt;
+        &lt;colorGreenMinimum type=&quot;Integer&quot;/&gt;
+        &lt;colorBlueMaximum type=&quot;Integer&quot;&gt;255&lt;/colorBlueMaximum&gt;
+        &lt;colorBlueMinimum type=&quot;Integer&quot;/&gt;
+      &lt;/colorLimits&gt;
+      &lt;pose type=&quot;Structure&quot;&gt;
+        &lt;rotation type=&quot;Structure&quot;&gt;
+          &lt;w type=&quot;Float&quot;&gt;1.00000000000000000e+00&lt;/w&gt;
+          &lt;x type=&quot;Float&quot;/&gt;
+          &lt;y type=&quot;Float&quot;/&gt;
+          &lt;z type=&quot;Float&quot;/&gt;
+        &lt;/rotation&gt;
+        &lt;translation type=&quot;Structure&quot;&gt;
+          &lt;x type=&quot;Float&quot;/&gt;
+          &lt;y type=&quot;Float&quot;/&gt;
+          &lt;z type=&quot;Float&quot;/&gt;
+        &lt;/translation&gt;
+      &lt;/pose&gt;
+      &lt;points type=&quot;CompressedVector&quot; fileOffset=&quot;48&quot; recordCount=&quot;518889&quot;&gt;
+        &lt;prototype type=&quot;Structure&quot;&gt;
+          &lt;cartesianX type=&quot;Float&quot; precision=&quot;single&quot;/&gt;
+          &lt;cartesianY type=&quot;Float&quot; precision=&quot;single&quot;/&gt;
+          &lt;cartesianZ type=&quot;Float&quot; precision=&quot;single&quot;/&gt;
+          &lt;colorRed type=&quot;Integer&quot; minimum=&quot;0&quot; maximum=&quot;255&quot;/&gt;
+          &lt;colorGreen type=&quot;Integer&quot; minimum=&quot;0&quot; maximum=&quot;255&quot;/&gt;
+          &lt;colorBlue type=&quot;Integer&quot; minimum=&quot;0&quot; maximum=&quot;255&quot;/&gt;
+          &lt;nor:normalX type=&quot;Float&quot; precision=&quot;single&quot; minimum=&quot;-1.0000000e+00&quot; maximum=&quot;1.0000000e+00&quot;/&gt;
+          &lt;nor:normalY type=&quot;Float&quot; precision=&quot;single&quot; minimum=&quot;-1.0000000e+00&quot; maximum=&quot;1.0000000e+00&quot;/&gt;
+          &lt;nor:normalZ type=&quot;Float&quot; precision=&quot;single&quot; minimum=&quot;-1.0000000e+00&quot; maximum=&quot;1.0000000e+00&quot;/&gt;
+        &lt;/prototype&gt;
+        &lt;codecs type=&quot;Vector&quot; allowHeterogeneousChildren=&quot;1&quot;&gt;
+        &lt;/codecs&gt;
+      &lt;/points&gt;
+    &lt;/vectorChild&gt;
+  &lt;/data3D&gt;
+  &lt;images2D type=&quot;Vector&quot; allowHeterogeneousChildren=&quot;1&quot;&gt;
+  &lt;/images2D&gt;
+&lt;/e57Root&gt;</rawE57XmlDumpOutput>
+</E57MetadataExtractor>
 ```
 
 ## Dependencies
