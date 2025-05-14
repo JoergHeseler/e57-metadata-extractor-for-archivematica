@@ -1,6 +1,6 @@
 # E57 Metadata Extractor for Archivematica
 
-This repository provides a script to extract metadata from ASTM E57 files in [Archivematica](https://www.archivematica.org/) using the official [E57 Validator](http://www.libe57.org/download.html) tool.
+This repository provides a script to extract metadata from ASTM E57 files in [Archivematica](https://www.archivematica.org/) using the [libE57 tools](http://www.libe57.org/download.html) tool.
 
 ## Installation
 
@@ -18,7 +18,7 @@ To install this script, follow these steps:
 
 - In the Archivematica frontend, navigate to **Preservation planning** > **Format policy registry** > **Tools** > **Create new tool** or go directly to [this link](http://10.10.10.20/fpr/fptool/create/).
 - Enter the following parameters:
-  - **Description**: Enter `e57_validator`.
+  - **Description**: Enter `e57xmldump`.
   - **Version**: Enter the version you downloaded, e. g. `2.0.0-dev.3.8`.
 - Click **Save**.
 
@@ -26,8 +26,8 @@ To install this script, follow these steps:
 
 - In the Archivematica frontend, navigate to **Preservation planning** > **Characterization** > **Commands** > **Create new command** or go directly to [this link](http://10.10.10.20/fpr/fpcommand/create/).
 - Fill in the following fields:
-  - **The related tool**: Select **e57_validator**.
-  - **Description**: Enter `Characterize using e57_validator`.
+  - **The related tool**: Select **e57xmldump**.
+  - **Description**: Enter `Characterize using e57xmldump`.
   - **Command**: Paste the entire content of the [**e57-metadata-extractor.py**](./src/e57-metadata-extractor.py) file.
   - **Script type**: Select **Python script**.
   - **The related output format**: Select **Text (Markup): XML: XML (fmt/101)**.
@@ -35,31 +35,13 @@ To install this script, follow these steps:
   - Leave all other input fields and combo boxes untouched.
 - Click **Save**.
 
-### 5. Create a new characterization rule for ASCII based E57 1.0
+### 5. Create a new characterization rule E57
 
 - In the Archivematica frontend, navigate to **Preservation planning** > **Characterization** > **Rules** > **Create new rule** or go directly to [this link](http://10.10.10.20/fpr/fprule/create/).
 - Fill in the following fields:
   - **Purpose**: Select **Characterization**.
-  - **The related format**: Select **Model: GL Transmission Format (Text): E57 1.0 (fmt/1314)**.
-  - **Command**: Select **Characterize using e57_validator**.
-- Click **Save**.
-
-### 6. Create a new characterization rule for ASCII based E57 2.0
-
-- In the Archivematica frontend, navigate to **Preservation planning** > **Characterization** > **Rules** > **Create new rule** or go directly to [this link](http://10.10.10.20/fpr/fprule/create/).
-- Fill in the following fields:
-  - **Purpose**: Select **Characterization**.
-  - **The related format**: Select **Model: GL Transmission Format (Text): E57 2.0 (fmt/1315)**.
-  - **Command**: Select **Characterize using e57_validator**.
-- Click **Save**.
-
-### 7. Create a new characterization rule for binary E57 files
-
-- In the Archivematica frontend, navigate to **Preservation planning** > **Characterization** > **Rules** > **Create new rule** or go directly to [this link](http://10.10.10.20/fpr/fprule/create/).
-- Fill in the following fields:
-  - **Purpose**: Select **Characterization**.
-  - **The related format**: Select **Model: GL Transmission Format (Binary): E57 (Binary) (fmt/1316)**.
-  - **Command**: Select **Characterize using e57_validator**.
+  - **The related format**: Select **Image (Vector): ASTM E57 3D File Format: E57 3D File Format (fmt/643)**.
+  - **Command**: Select **Characterize using e57xmldump**.
 - Click **Save**.
 
 ## Test
@@ -74,7 +56,7 @@ Valid files should pass characterization with this script and return error code 
 
 ### In the command line:
 
-You can use the validator at the command line prompt by typing `python e57-metadata-extractor.py --file-full-name=<E57 file to characterize>`. You may also want to add `--validator-path=<path to the official e57_validator>`.
+You can use the validator at the command line prompt by typing `python e57-metadata-extractor.py --file-full-name=<E57 file to characterize>`. You may also want to add `--validator-path=<path to the e57xmldump>`.
 
 ### Example
 
@@ -183,7 +165,7 @@ If you use this script to characterize the ASCII embedded E57 2.0 model [`cockat
 
 ## Dependencies
 
-[Archivematica 1.13.2](https://github.com/artefactual/archivematica/releases/tag/v1.13.2) and [e57-Validator 2.0.0-dev.3.8](https://github.com/KhronosGroup/e57-Validator/releases/tag/2.0.0-dev.3.8) were used to analyze, design, develop and test this script.
+[Archivematica 1.13.2](https://github.com/artefactual/archivematica/releases/tag/v1.13.2) and [libE57 tools](http://www.libe57.org/download.html) were used to analyze, design, develop and test this script.
 
 ## Background
 
