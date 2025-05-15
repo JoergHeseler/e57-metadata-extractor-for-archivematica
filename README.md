@@ -65,64 +65,62 @@ If you use this script to characterize the E57 model [`cockatoo-e57-1.0-color_tr
 ```xml
 <?xml version="1.0" ?>
 <E57MetadataExtractor xmlns="http://nfdi4culture.de/e57-metadata-extractor1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://nfdi4culture.de/e57-metadata-extractor1 https://raw.githubusercontent.com/JoergHeseler/e57-metadata-extractor-for-archivematica/refs/heads/main/src/e57-metadata-extractor.xsd">
-    <formatName>ASTM E57 3D Imaging Data File</formatName>
+    <formatName>E57 (ASTM E57 3D Imaging Data File)</formatName>
     <formatVersion>1.0</formatVersion>
-    <size>14075904</size>
-    <SHA256Checksum>5f637c6f617d162adc9a49a697e2ec362280307e0f9204fe89dbf8ed4b3201dd</SHA256Checksum>
-    <creationDate>2025-05-15T09:00:35.559343</creationDate>
-    <modificationDate>2025-05-15T09:00:36.222565</modificationDate>
-    <library>E57Format-3.1.1-AMD64_64-vc1916</library>
-    <totalScanCount>1</totalScanCount>
+    <size>14074880</size>
+    <SHA256Checksum>45c2b120c7e4e9ec41aaa592b4e7963b62ac396e51b9083cfce3e36413145e58</SHA256Checksum>
+    <creationDate>2025-04-30T08:18:11.397547</creationDate>
+    <modificationDate>2025-01-14T14:52:31.466197</modificationDate>
+    <library>E57Format-2.2.0-AMD64_64-windows</library>
+    <scanCount>1</scanCount>
     <hasColoredScans>true</hasColoredScans>
     <totalPointCount>518889</totalPointCount>
-    <totalImageCount>0</totalImageCount>
+    <imageCount>0</imageCount>
     <rawE57XmlDumpOutput>
 <![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <e57Root type="Structure"
          xmlns="http://www.astm.org/COMMIT/E57/2010-e57-v1.0"
          xmlns:nor="http://www.libe57.org/E57_NOR_surface_normals.txt">
   <formatName type="String"><![CDATA[ASTM E57 3D Imaging Data File]]]]><![CDATA[></formatName>
-  <guid type="String"><![CDATA[{30a6a09e-310b-4cfd-990a-503cc334d181}]]]]><![CDATA[></guid>
+  <guid type="String"><![CDATA[{233FB646-7CBC-4B4B-750F-2B54793346A5}]]]]><![CDATA[></guid>
   <versionMajor type="Integer">1</versionMajor>
   <versionMinor type="Integer"/>
-  <e57LibraryVersion type="String"><![CDATA[E57Format-3.1.1-AMD64_64-vc1916]]]]><![CDATA[></e57LibraryVersion>
-  <coordinateMetadata type="String"/>
-  <creationDateTime type="Structure">
-    <dateTimeValue type="Float"/>
-    <isAtomicClockReferenced type="Integer"/>
-  </creationDateTime>
+  <e57LibraryVersion type="String"><![CDATA[E57Format-2.2.0-AMD64_64-windows]]]]><![CDATA[></e57LibraryVersion>
   <data3D type="Vector" allowHeterogeneousChildren="1">
     <vectorChild type="Structure">
-      <guid type="String"><![CDATA[{a4f1ec4b-75fa-4e3d-9a03-0ee34d1e1da8}]]]]><![CDATA[></guid>
-      <name type="String"><![CDATA[cockatoo-ply-1.0_binary-unmodified-unknown - Cloud]]]]><![CDATA[></name>
-      <description type="String"><![CDATA[Created by CloudCompare v2.13.2 (Kharkiv - Jul  6 2024)]]]]><![CDATA[></description>
+      <guid type="String"><![CDATA[{aa9ade13-58b5-403b-a810-a3883ae3effb}]]]]><![CDATA[></guid>
       <colorLimits type="Structure">
-        <colorRedMinimum type="Integer"/>
         <colorRedMaximum type="Integer">255</colorRedMaximum>
-        <colorGreenMinimum type="Integer"/>
+        <colorRedMinimum type="Integer"/>
         <colorGreenMaximum type="Integer">255</colorGreenMaximum>
-        <colorBlueMinimum type="Integer"/>
+        <colorGreenMinimum type="Integer"/>
         <colorBlueMaximum type="Integer">255</colorBlueMaximum>
+        <colorBlueMinimum type="Integer"/>
       </colorLimits>
-      <cartesianBounds type="Structure">
-        <xMinimum type="Float">-1.35499944686889648e+01</xMinimum>
-        <xMaximum type="Float">1.06771125793457031e+01</xMaximum>
-        <yMinimum type="Float">7.80896702781319618e-03</yMinimum>
-        <yMaximum type="Float">2.07065315246582031e+01</yMaximum>
-        <zMinimum type="Float">-5.19243621826171875</zMinimum>
-        <zMaximum type="Float">5.3844757080078125</zMaximum>
-      </cartesianBounds>
+      <pose type="Structure">
+        <rotation type="Structure">
+          <w type="Float">1.00000000000000000e+00</w>
+          <x type="Float"/>
+          <y type="Float"/>
+          <z type="Float"/>
+        </rotation>
+        <translation type="Structure">
+          <x type="Float"/>
+          <y type="Float"/>
+          <z type="Float"/>
+        </translation>
+      </pose>
       <points type="CompressedVector" fileOffset="48" recordCount="518889">
         <prototype type="Structure">
-          <cartesianX type="Float" precision="single" minimum="-1.3549994e+01" maximum="1.0677113e+01">-1.4364409</cartesianX>
-          <cartesianY type="Float" precision="single" minimum="7.808967e-03" maximum="2.0706532e+01">1.035717e+01</cartesianY>
-          <cartesianZ type="Float" precision="single" minimum="-5.1924362" maximum="5.3844757">9.6019745e-02</cartesianZ>
-          <nor:normalX type="Float" precision="single" minimum="-1" maximum="1"/>
-          <nor:normalY type="Float" precision="single" minimum="-1" maximum="1"/>
-          <nor:normalZ type="Float" precision="single" minimum="-1" maximum="1"/>
+          <cartesianX type="Float" precision="single"/>
+          <cartesianY type="Float" precision="single"/>
+          <cartesianZ type="Float" precision="single"/>
           <colorRed type="Integer" minimum="0" maximum="255"/>
           <colorGreen type="Integer" minimum="0" maximum="255"/>
           <colorBlue type="Integer" minimum="0" maximum="255"/>
+          <nor:normalX type="Float" precision="single" minimum="-1.0000000e+00" maximum="1.0000000e+00"/>
+          <nor:normalY type="Float" precision="single" minimum="-1.0000000e+00" maximum="1.0000000e+00"/>
+          <nor:normalZ type="Float" precision="single" minimum="-1.0000000e+00" maximum="1.0000000e+00"/>
         </prototype>
         <codecs type="Vector" allowHeterogeneousChildren="1">
         </codecs>
