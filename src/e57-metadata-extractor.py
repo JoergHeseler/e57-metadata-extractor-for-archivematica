@@ -33,7 +33,7 @@ def get_e57xmldump_path_from_arguments():
     for arg in sys.argv:
         if arg.lower().startswith("--e57xmldump-path="):
             return arg.split("=", 1)[1].rstrip('/\\')
-    return '/usr/share/e57_xmldump'
+    return '/usr/share'
 
 def get_target_file_name_from_arguments():
     for arg in sys.argv:
