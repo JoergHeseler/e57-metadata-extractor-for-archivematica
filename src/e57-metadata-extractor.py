@@ -69,7 +69,6 @@ def parse_e57xmldump_data(target):
 def extract_e57_metadata(file_path):
     e57_output = parse_e57xmldump_data(file_path)
     e57_xml_output_root = ET.fromstring(e57_output)
-    # print(e57_output)
 
     # File metadata
     file_size = os.path.getsize(file_path)
@@ -87,7 +86,7 @@ def extract_e57_metadata(file_path):
 
     # Create XML tree
     ns = {'e57':'http://www.astm.org/COMMIT/E57/2010-e57-v1.0'}
-    ET.SubElement(root, 'formatName').text = e57_xml_output_root.find('e57:formatName', ns).text #'ASTM E57 3D Imaging Data File'
+    ET.SubElement(root, 'formatName').text = 'E57 (' + e57_xml_output_root.find('e57:formatName', ns).text + ')' #'ASTM E57 3D Imaging Data File'
     version_minor = e57_xml_output_root.find('e57:versionMinor', ns)
     if version_minor.text is not None:
         version_minor = version_minor.text
@@ -99,7 +98,7 @@ def extract_e57_metadata(file_path):
     ET.SubElement(root, 'creationDate').text = creation_date
     ET.SubElement(root, 'modificationDate').text = modification_date
     ET.SubElement(root, 'library').text = e57_xml_output_root.find('e57:e57LibraryVersion', ns).text
-    ET.SubElement(root, 'totalScanCount').text = str(len(e57_xml_output_root.find('e57:data3D', ns).findall('e57:vectorChild', ns)))
+    ET.SubElement(root, 'scanCount').text = str(len(e57_xml_output_root.find('e57:data3D', ns).findall('e57:vectorChild', ns)))
     total_points_count = 0
     for d3d in e57_xml_output_root.findall('e57:data3D', ns):
         for vc in d3d.findall('e57:vectorChild', ns):
@@ -116,7 +115,7 @@ def extract_e57_metadata(file_path):
         pass
     ET.SubElement(root, 'hasColoredScans').text = 'true' if has_colored_scans else 'false'
     ET.SubElement(root, 'totalPointCount').text = str(total_points_count)
-    ET.SubElement(root, 'totalImageCount').text = str(len(e57_xml_output_root.find('e57:images2D', ns)))
+    ET.SubElement(root, 'imageCount').text = str(len(e57_xml_output_root.find('e57:images2D', ns)))
     
     # Convert ElementTree to minidom document for CDATA support
     xml_str = ET.tostring(root, encoding='utf-8')
