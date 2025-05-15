@@ -135,7 +135,7 @@ If you use this script to characterize the E57 model [`cockatoo-e57-1.0-color_tr
 
 ## Dependencies
 
-[Archivematica 1.13.2](https://github.com/artefactual/archivematica/releases/tag/v1.13.2) and [libE57 tools](http://www.libe57.org/download.html) were used to analyze, design, develop and test this script.
+[Archivematica 1.13.2](https://github.com/artefactual/archivematica/releases/tag/v1.13.2) and [libE57 tools 1.1.312](http://www.libe57.org/download.html) were used to analyze, design, develop and test this script.
 
 ## Background
 
