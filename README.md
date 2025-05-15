@@ -146,6 +146,7 @@ As part of the [NFDI4Culture](https://nfdi4culture.de/) initiative, efforts are 
 ## Related projects
 
 - [DAE Validator for Archivematica](https://github.com/JoergHeseler/dae-validator-for-archivematica)
+- [E57 Validator for Archivematica](https://github.com/JoergHeseler/e57-validator-for-archivematica)
 - [glTF Validator for Archivematica](https://github.com/JoergHeseler/gltf-validator-for-archivematica)
 - [Mesh Samples for Preservation Testing](https://github.com/JoergHeseler/mesh-samples-for-preservation-testing)
 - [Point Cloud Samples for Digital Preservation Testing](https://github.com/JoergHeseler/point-cloud-samples-for-preservation-testing)
