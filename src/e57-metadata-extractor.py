@@ -17,14 +17,15 @@ from xml.dom import minidom
 
 def safe_cdata_chunks(text):
     """Zerlegt einen Text so, dass er sicher in CDATA-Abschnitten verwendet werden kann"""
-    # CDATA-Ende-Sequenz: ]]>
-    # Um das zu vermeiden, teilen wir den Text an jeder Stelle, wo diese Sequenz vorkommt
+    # CDATA end sequence: ]]>
+    # To avoid this, we split the text at every point where this sequence occurs
+  
     parts = text.split("]]>")
     chunks = []
 
     for i, part in enumerate(parts):
         chunks.append(('>' if i > 0 else '') + part + (']]' if i < len(parts) - 1 else ''))
-        # print('PART ------ ', i, ':', chunks[-1])
+        # print('PART', i, '------ : ', chunks[-1])
 
     return chunks
 
@@ -85,8 +86,6 @@ def extract_e57_metadata(file_path):
     })
 
     # Create XML tree
-    # print(ET.tostring(e57_xml_output_root))
-    # print(e57_xml_output_root.find('formatName'))
     ns = {'e57':'http://www.astm.org/COMMIT/E57/2010-e57-v1.0'}
     ET.SubElement(root, 'formatName').text = e57_xml_output_root.find('e57:formatName', ns).text #'ASTM E57 3D Imaging Data File'
     version_minor = e57_xml_output_root.find('e57:versionMinor', ns)
@@ -118,7 +117,6 @@ def extract_e57_metadata(file_path):
     ET.SubElement(root, 'hasColoredScans').text = 'true' if has_colored_scans else 'false'
     ET.SubElement(root, 'totalPointCount').text = str(total_points_count)
     ET.SubElement(root, 'totalImageCount').text = str(len(e57_xml_output_root.find('e57:images2D', ns)))
-    # ET.SubElement(root, 'rawE57XmlDumpOutput').text = e57_output.strip().replace("]]>", "]]><![CDATA[>")
     
     # Convert ElementTree to minidom document for CDATA support
     xml_str = ET.tostring(root, encoding='utf-8')
