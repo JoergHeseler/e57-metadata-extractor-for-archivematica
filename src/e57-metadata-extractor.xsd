@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           xmlns="http://nfdi4culture.de/gltf-metadata-extractor1"
-           targetNamespace="http://nfdi4culture.de/gltf-metadata-extractor1"
+           xmlns="http://nfdi4culture.de/e57-metadata-extractor1"
+           targetNamespace="http://nfdi4culture.de/e57-metadata-extractor1"
            elementFormDefault="qualified"
            version="1.0">
 
