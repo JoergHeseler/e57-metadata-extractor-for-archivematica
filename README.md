@@ -46,7 +46,7 @@ To install this script, follow these steps:
 
 ## Test
 
-To test this metadata exctractor, you can use the sample E57 files located [here](https://github.com/JoergHeseler/point-cloud-samples-for-preservation-testing/tree/main/e57).
+To test this metadata exctractor, you can use the sample E57 files located [here](https://git.slub-dresden.de/nfdi4culturedigitalpreservation/point-cloud-samples-for-preservation-testing/tree/main/e57).
 
 ### In Archivematica:
 
@@ -60,7 +60,7 @@ You can use the validator at the command line prompt by typing `python e57-metad
 
 ### Example
 
-If you use this script to characterize the E57 model [`cockatoo-e57-1.0-color_transferred-valid.e57`](https://github.com/JoergHeseler/point-cloud-samples-for-preservation-testing/blob/main/e57/cockatoo-e57-1.0-color_transferred-valid), the error code **0** should be returned and the following XML content will be included in the AIP's METS document in the <objectCharacteristicsExtension> element of the file:
+If you use this script to characterize the E57 model [`cockatoo-e57-1.0-color_transferred-valid.e57`](https://git.slub-dresden.de/nfdi4culturedigitalpreservation/point-cloud-samples-for-preservation-testing/blob/main/e57/cockatoo-e57-1.0-color_transferred-valid), the error code **0** should be returned and the following XML content will be included in the AIP's METS document in the <objectCharacteristicsExtension> element of the file:
 
 ```xml
 <?xml version="1.0" ?>
@@ -143,7 +143,7 @@ As part of the [NFDI4Culture](https://nfdi4culture.de/) initiative, efforts are 
 
 ## Related Projects
 
-- [NFDI4Culture 3D Reference Implementations](https://github.com/JoergHeseler/nfdi4culture-3d-reference-implementations)
+- [NFDI4Culture 3D Reference Implementations](https://git.slub-dresden.de/nfdi4culturedigitalpreservation/nfdi4culture-3d-reference-implementations)
 
 ## Contributing
 
